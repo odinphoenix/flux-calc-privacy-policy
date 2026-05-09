@@ -2,513 +2,325 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy – Flux Calc</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – FLUX CALC</title>
   <style>
-    :root {
-      --bg: #0d0f14;
-      --surface: #141720;
-      --surface2: #1a1e2a;
-      --border: #232838;
-      --accent: #00e5c0;
-      --accent2: #0099ff;
-      --text: #e2e8f0;
-      --muted: #8892a4;
-      --heading: #ffffff;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
-      min-height: 100vh;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 24px 16px 60px;
     }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(0,229,192,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,229,192,0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .wrapper {
-      position: relative;
-      z-index: 1;
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 60px 24px 80px;
-    }
-
+    .container { max-width: 720px; margin: 0 auto; }
     header {
       text-align: center;
-      margin-bottom: 56px;
+      padding: 40px 0 32px;
+      border-bottom: 1px solid #222;
+      margin-bottom: 32px;
     }
-
-    .logo-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 40px;
-      padding: 8px 20px;
-      margin-bottom: 28px;
-    }
-
-    .logo-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 8px var(--accent);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    .logo-text {
-      font-family: 'Space Mono', monospace;
+    header h1 {
       font-size: 13px;
-      color: var(--accent);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-family: 'Space Mono', monospace;
-      font-size: clamp(28px, 6vw, 48px);
-      color: var(--heading);
-      letter-spacing: -1px;
-      line-height: 1.1;
-      margin-bottom: 16px;
-    }
-
-    h1 span { color: var(--accent); }
-
-    .updated {
-      font-size: 13px;
-      color: var(--muted);
-      font-family: 'Space Mono', monospace;
-      letter-spacing: 1px;
-    }
-
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      margin: 32px auto;
-      border-radius: 2px;
-    }
-
-    .section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      margin-bottom: 20px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.3s;
-    }
-
-    .section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--accent), var(--accent2));
-      border-radius: 3px 0 0 3px;
-    }
-
-    .section:hover { border-color: rgba(0,229,192,0.25); }
-
-    .section-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
+      font-weight: 900;
       letter-spacing: 3px;
+      color: #00e0ff;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
     }
-
-    h2 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--heading);
-      margin: 20px 0 10px;
+    header p { font-size: 11px; color: #666; margin-top: 6px; letter-spacing: 1px; }
+    .card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 24px;
+      padding: 32px 28px;
     }
-
-    h2:first-of-type { margin-top: 8px; }
-
-    p {
-      color: var(--text);
-      font-size: 15px;
-      line-height: 1.8;
-      margin-bottom: 12px;
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    .data-item {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
-      margin-bottom: 10px;
-    }
-
-    .data-item:last-child { margin-bottom: 0; }
-
-    .data-icon {
-      width: 36px; height: 36px;
-      border-radius: 8px;
-      background: rgba(0,229,192,0.1);
-      border: 1px solid rgba(0,229,192,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      flex-shrink: 0;
-    }
-
-    .data-content strong {
-      display: block;
-      color: var(--heading);
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .data-content span {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .service-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 16px;
-      margin: 6px 6px 0 0;
-      font-size: 14px;
-    }
-
-    .chip-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .chip-name { color: var(--heading); font-weight: 500; }
-    .chip-desc { color: var(--muted); }
-
-    .highlight-box {
-      background: rgba(0,229,192,0.05);
-      border: 1px solid rgba(0,229,192,0.15);
-      border-radius: 10px;
-      padding: 16px 20px;
-      margin-top: 16px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .highlight-box strong { color: var(--accent); }
-
-    footer {
-      text-align: center;
-      margin-top: 48px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-    }
-
-    footer p { color: var(--muted); font-size: 13px; }
-    footer a { color: var(--accent); text-decoration: none; }
-
-    .footer-brand {
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      color: var(--border);
-      margin-top: 16px;
+    .section { margin-bottom: 28px; }
+    .section-title {
+      font-size: 10px;
+      font-weight: 800;
       letter-spacing: 2px;
+      color: #00e0ff;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
+    .section p, .section li { color: #999; font-size: 14px; line-height: 1.8; }
+    .section ul { padding-left: 0; list-style: none; }
+    .section ul li { padding: 3px 0; }
+    .section ul li::before { content: "• "; color: #555; }
+    b, strong { color: #e0e0e0; font-weight: 700; }
+    .divider { height: 1px; background: #222; margin-bottom: 28px; opacity: 0.6; }
+    footer { text-align: center; margin-top: 40px; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: #333; text-transform: uppercase; }
+    a { color: #00e0ff; text-decoration: none; word-break: break-all; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 480px) { .card { padding: 20px 16px; } }
   </style>
 </head>
 <body>
-  <div class="wrapper">
+<div class="container">
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>FLUX CALC &nbsp;|&nbsp; Last Updated: May 2026</p>
+  </header>
 
-    <header>
-      <div class="logo-badge">
-        <div class="logo-dot"></div>
-        <span class="logo-text">Flux Calc</span>
-      </div>
-      <h1>Privacy <span>Policy</span></h1>
-      <p class="updated">// Last Updated: May 2026</p>
-      <div class="divider"></div>
-    </header>
+  <div class="card">
 
-    <!-- 01 Introduction -->
     <div class="section">
-      <div class="section-label">01 — Introduction</div>
-      <p>Welcome to <strong>FLUX CALC</strong>. Your privacy is a priority. This policy explains what information we collect, how we use it, and your rights when you use our professional calculator suite.</p>
-      <p>By using FLUX CALC, you agree to the collection and use of information as described in this policy.</p>
+      <div class="section-title">Introduction</div>
+      <p>Welcome to FLUX CALC. Your privacy is important to us. This Privacy Policy explains what information we collect, why we collect it, how we use it, who we share it with, and your rights as a user.</p>
+      <br>
+      <p>By using FLUX CALC, you agree to the practices described in this policy.</p>
     </div>
 
-    <!-- 02 Information We Collect -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">02 — Information We Collect</div>
-
-      <h2>Data Stored Locally on Your Device</h2>
-      <div class="data-item">
-        <div class="data-icon">💾</div>
-        <div class="data-content">
-          <strong>Calculation History</strong>
-          <span>Results from calculators you use are saved locally on your device via AsyncStorage. This data never leaves your device.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">⚙️</div>
-        <div class="data-content">
-          <strong>App Settings</strong>
-          <span>Your preferences (theme, language, digit grouping) are stored locally on your device only.</span>
-        </div>
-      </div>
-
-      <h2>Analytics Data (Firebase Analytics)</h2>
-      <div class="data-item">
-        <div class="data-icon">📊</div>
-        <div class="data-content">
-          <strong>Usage Analytics</strong>
-          <span>We use Google Firebase Analytics to understand how users interact with the app. This collects: screen views and navigation paths, which calculators are used most, session duration and app open frequency, device type, OS version and country/region, and search terms entered in the app's search bar. This data is anonymised and aggregated — we cannot identify individual users.</span>
-        </div>
-      </div>
-
-      <h2>Advertising Data (Google AdMob)</h2>
-      <div class="data-item">
-        <div class="data-icon">📢</div>
-        <div class="data-content">
-          <strong>Non-Personalised Ads</strong>
-          <span>We display advertisements via Google AdMob. AdMob may collect: Advertising ID (Android Ad ID), device information (model, OS version), and IP address for regional ad serving. We request only non-personalised ads — no personal profile is built for targeted advertising.</span>
-        </div>
-      </div>
-
-      <h2>Network Requests</h2>
-      <div class="data-item">
-        <div class="data-icon">🌐</div>
-        <div class="data-content">
-          <strong>Currency Exchange Rates</strong>
-          <span>The currency converter fetches live rates from a public CDN (cdn.jsdelivr.net). Only your IP address is incidentally transmitted as part of a standard HTTPS request. No personal data is sent.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">🌍</div>
-        <div class="data-content">
-          <strong>Translation Requests</strong>
-          <span>If you change the app language, UI strings are translated via DeepL and/or Google Translate APIs. Only UI text strings (not your calculations) are sent. No personal identifiers are included.</span>
-        </div>
-      </div>
+      <div class="section-title">Who We Are (Data Controller)</div>
+      <p>FLUX CALC is developed and operated by:</p><br>
+      <ul>
+        <li><strong>Developer:</strong> Aryan Dutt Gaur</li>
+        <li><strong>App:</strong> FLUX CALC (com.flux.calc)</li>
+        <li><strong>Contact:</strong> <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></li>
+      </ul>
+      <br>
+      <p>As a small independent developer, the developer acts as the Data Controller for any personal data processed in connection with this app. We do not have a dedicated Data Protection Officer (DPO) — all data-related enquiries should be directed to the contact email above.</p>
     </div>
 
-    <!-- 03 How We Use Your Information -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">03 — How We Use Your Information</div>
-      <div class="data-item">
-        <div class="data-icon">🔍</div>
-        <div class="data-content">
-          <strong>App Improvement</strong>
-          <span>Analytics data is used solely to improve the app — fixing bugs, prioritising features, and understanding usage patterns.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">📣</div>
-        <div class="data-content">
-          <strong>Advertising</strong>
-          <span>Ad data is used by Google AdMob to serve relevant, non-personalised advertisements.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">🚫</div>
-        <div class="data-content">
-          <strong>No Data Sales</strong>
-          <span>We do not sell, rent, or share your personal information with third parties for marketing purposes.</span>
-        </div>
-      </div>
+      <div class="section-title">Information We Collect</div>
+      <p><strong>1. Data Stored Locally on Your Device</strong></p><br>
+      <ul>
+        <li><strong>Calculation History:</strong> Results from calculators you use are saved locally on your device using AsyncStorage. This data never leaves your device.</li>
+        <li><strong>App Settings:</strong> Your preferences (theme, language, digit grouping) are stored locally on your device.</li>
+      </ul>
+      <br>
+      <p><strong>2. Analytics Data (Firebase Analytics)</strong></p><br>
+      <p>We use Google Firebase Analytics to understand how users interact with the app. This may collect:</p>
+      <ul>
+        <li>Screen views and navigation paths</li>
+        <li>Which calculators are used most frequently</li>
+        <li>Session duration and app open frequency</li>
+        <li>Device type, operating system version, and country/region</li>
+        <li>Search terms entered in the app's search bar</li>
+        <li>App instance ID (a non-personal random identifier)</li>
+      </ul>
+      <br>
+      <p>This data is anonymised and aggregated. We cannot identify individual users from this data.</p>
+      <br>
+      <p><strong>3. Advertising Data (Google AdMob)</strong></p><br>
+      <p>We display advertisements via Google AdMob. AdMob may collect:</p>
+      <ul>
+        <li>Advertising ID (Android Advertising ID)</li>
+        <li>Device information (model, OS version, screen size)</li>
+        <li>IP address (used for regional ad serving only)</li>
+        <li>Ad interaction data (impressions, clicks)</li>
+      </ul>
+      <br>
+      <p>We request <strong>non-personalised ads only</strong>. No personal profile is built for targeted advertising.</p>
+      <br>
+      <p><strong>4. Currency Exchange Rate Requests</strong></p><br>
+      <p>The currency converter fetches live rates from a public API (cdn.jsdelivr.net / @fawazahmed0). Only your IP address is incidentally transmitted as part of a standard HTTPS request. No personal data is sent or stored by us.</p>
+      <br>
+      <p><strong>5. Translation Requests</strong></p><br>
+      <p>If you change the app language, UI strings are translated via DeepL API and/or Google Translate API. Only the UI text strings (not your calculations or personal data) are sent. No personal identifiers are included in these requests.</p>
     </div>
 
-    <!-- 04 Advertising -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">04 — Advertising</div>
-      <p>FLUX CALC displays interstitial advertisements powered by Google AdMob. Ads are shown after you perform calculations, with a maximum of <strong>5 ads per day</strong>.</p>
-      <p>We request non-personalised ads only (<code style="background:var(--surface2);padding:2px 6px;border-radius:4px;font-size:13px;">requestNonPersonalizedAdsOnly = true</code>), meaning ads are not targeted based on your personal profile or browsing history.</p>
-      <div class="highlight-box">
-        <strong>Google's Ad Policy:</strong> For more information about how Google uses data from apps that use AdMob, visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com/technologies/partner-sites</a>
-      </div>
+      <div class="section-title">Legal Basis for Processing (GDPR)</div>
+      <p>For users in the European Union and European Economic Area, we process personal data under the following legal bases:</p><br>
+      <ul>
+        <li><strong>Legitimate Interests (Art. 6(1)(f)):</strong> Firebase Analytics data is processed to improve app performance, fix bugs, and understand usage patterns.</li>
+        <li><strong>Consent (Art. 6(1)(a)):</strong> Advertising data via AdMob is processed based on your implicit consent to non-personalised advertising when you use the app. You may withdraw this by opting out as described in the Your Rights section.</li>
+        <li><strong>Contractual necessity (Art. 6(1)(b)):</strong> Currency exchange rates and translation requests are necessary to provide the features you explicitly request.</li>
+      </ul>
     </div>
 
-    <!-- 05 Third-Party Services -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">05 — Third-Party Services</div>
-      <p>FLUX CALC uses the following third-party services, each governed by their own privacy policies:</p>
-      <br/>
-      <div class="service-chip">
-        <div class="chip-dot"></div>
-        <span class="chip-name">Google Firebase Analytics</span>
-        <span class="chip-desc">— Usage analytics</span>
-      </div>
-      <div class="service-chip">
-        <div class="chip-dot"></div>
-        <span class="chip-name">Google AdMob</span>
-        <span class="chip-desc">— In-app advertising</span>
-      </div>
-      <div class="service-chip">
-        <div class="chip-dot"></div>
-        <span class="chip-name">cdn.jsdelivr.net</span>
-        <span class="chip-desc">— Live exchange rates</span>
-      </div>
-      <div class="service-chip">
-        <div class="chip-dot"></div>
-        <span class="chip-name">DeepL API</span>
-        <span class="chip-desc">— UI translation</span>
-      </div>
-      <div class="service-chip">
-        <div class="chip-dot"></div>
-        <span class="chip-name">Google Translate</span>
-        <span class="chip-desc">— Fallback UI translation</span>
-      </div>
-      <div class="highlight-box">
-        <strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
-      </div>
+      <div class="section-title">How We Use Your Information</div>
+      <ul>
+        <li>Analytics data is used solely to improve the app — fixing bugs, prioritising features, and understanding usage patterns.</li>
+        <li>Ad data is used by Google AdMob to serve non-personalised advertisements.</li>
+        <li>Currency and translation data is used to provide the features you request in real time.</li>
+        <li>We do <strong>not</strong> sell, rent, or share your personal information with third parties for marketing purposes.</li>
+        <li>We do <strong>not</strong> use your data for profiling or automated decision-making.</li>
+      </ul>
     </div>
 
-    <!-- 06 Children's Privacy -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">06 — Children's Privacy</div>
-      <p>FLUX CALC is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-      <p>If you believe your child has provided us with personal information, please contact us at <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> and we will promptly delete it.</p>
-      <div class="highlight-box">
-        This app is rated for general audiences on Google Play but does not target children as its primary audience.
-      </div>
+      <div class="section-title">Data Sharing — We Do Not Sell Your Data</div>
+      <p><strong>We do not sell or rent your personal data to any third party.</strong></p><br>
+      <p>We share data only with the third-party service providers listed below, solely to operate the app's features:</p><br>
+      <ul>
+        <li><strong>Google Firebase Analytics</strong> — anonymised usage analytics</li>
+        <li><strong>Google AdMob</strong> — non-personalised in-app advertising</li>
+        <li><strong>cdn.jsdelivr.net / @fawazahmed0</strong> — live currency exchange rates</li>
+        <li><strong>DeepL API</strong> — UI string translation (optional)</li>
+        <li><strong>Google Translate API</strong> — fallback UI translation (optional)</li>
+      </ul>
+      <br>
+      <p>We do not share data with any other parties. If required by law to disclose information, we will do so only to the extent legally required.</p>
     </div>
 
-    <!-- 07 Data Retention -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">07 — Data Retention</div>
-      <div class="data-item">
-        <div class="data-icon">📱</div>
-        <div class="data-content">
-          <strong>Local Data</strong>
-          <span>History and settings remain on your device until you clear them via the app's History screen or uninstall the app.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">📊</div>
-        <div class="data-content">
-          <strong>Analytics Data</strong>
-          <span>Retained by Google Firebase for up to 14 months per Google's standard retention policy.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">📢</div>
-        <div class="data-content">
-          <strong>Ad Data</strong>
-          <span>Managed by Google AdMob per their data retention policies.</span>
-        </div>
-      </div>
+      <div class="section-title">Advertising</div>
+      <p>FLUX CALC displays interstitial advertisements powered by Google AdMob. Ads are shown after you perform calculations, capped at a maximum of <strong>5 ads per day</strong>.</p><br>
+      <p>We request <strong>non-personalised ads only</strong> (requestNonPersonalizedAdsOnly = true). Ads are served based on context — not based on your personal profile, browsing history, or behaviour across other apps.</p><br>
+      <p>For more information: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a></p>
     </div>
 
-    <!-- 08 Your Rights -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">08 — Your Rights</div>
-      <div class="data-item">
-        <div class="data-icon">📋</div>
-        <div class="data-content">
-          <strong>Access</strong>
-          <span>Request a copy of data we hold about you.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">🗑️</div>
-        <div class="data-content">
-          <strong>Deletion</strong>
-          <span>Delete your locally stored data using the "Clear History" option in the app, or by uninstalling.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">🚫</div>
-        <div class="data-content">
-          <strong>Opt Out of Ad Personalisation</strong>
-          <span>Go to Android Settings → Google → Ads → Opt out of Ads Personalisation.</span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">📤</div>
-        <div class="data-content">
-          <strong>Data Portability</strong>
-          <span>Your local calculation history can be cleared at any time from the History tab.</span>
-        </div>
-      </div>
+      <div class="section-title">Data Retention</div>
+      <ul>
+        <li><strong>Local data</strong> (history, settings) remains on your device until you clear it or uninstall the app. We have no access to this data.</li>
+        <li><strong>Firebase Analytics data</strong> is retained by Google for up to 14 months, then automatically deleted.</li>
+        <li><strong>AdMob advertising data</strong> is retained by Google per their policies (typically up to 90 days for ad interaction data).</li>
+        <li><strong>Currency and translation requests</strong> are transient — no data is retained by us after the request completes.</li>
+      </ul>
     </div>
 
-    <!-- 09 Data Security -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">09 — Data Security</div>
-      <p>All local data is stored using AsyncStorage on your device. Network requests to third-party APIs use HTTPS encryption. We do not operate servers that store your personal data.</p>
+      <div class="section-title">Your Rights — All Users</div>
+      <ul>
+        <li><strong>Access:</strong> Request information about what data we process relating to you.</li>
+        <li><strong>Deletion:</strong> Delete your locally stored history at any time from the History tab, or by uninstalling the app.</li>
+        <li><strong>Correction:</strong> Correct or update your locally stored data directly in the app.</li>
+        <li><strong>Opt out of analytics:</strong> Disable Firebase Analytics via your device's app permissions or by contacting us.</li>
+        <li><strong>Opt out of personalised ads:</strong> Go to Android Settings → Google → Ads → "Opt out of Ads Personalisation." Note: we already request non-personalised ads by default.</li>
+      </ul>
     </div>
 
-    <!-- 10 Changes -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">10 — Changes to This Policy</div>
-      <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last Updated" date at the top of this page. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+      <div class="section-title">Your Rights — EU / EEA Users (GDPR)</div>
+      <p>Under the General Data Protection Regulation (GDPR) you have the right to:</p><br>
+      <ul>
+        <li><strong>Access (Art. 15):</strong> Request a copy of the personal data we hold about you.</li>
+        <li><strong>Rectification (Art. 16):</strong> Request correction of inaccurate or incomplete personal data.</li>
+        <li><strong>Erasure / Right to be Forgotten (Art. 17):</strong> Request deletion of your personal data where there is no compelling reason for continued processing.</li>
+        <li><strong>Restrict Processing (Art. 18):</strong> Request restriction of how we process your data.</li>
+        <li><strong>Data Portability (Art. 20):</strong> Receive your data in a structured, machine-readable format.</li>
+        <li><strong>Object (Art. 21):</strong> Object to processing based on legitimate interests.</li>
+        <li><strong>Lodge a Complaint:</strong> Lodge a complaint with your local data protection supervisory authority. See: <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">edpb.europa.eu</a></li>
+      </ul>
     </div>
 
-    <!-- 11 Contact -->
+    <div class="divider"></div>
+
     <div class="section">
-      <div class="section-label">11 — Contact Us</div>
-      <p>If you have questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
-      <br/>
-      <div class="data-item">
-        <div class="data-icon">✉️</div>
-        <div class="data-content">
-          <strong>Email</strong>
-          <span><a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></span>
-        </div>
-      </div>
-      <div class="data-item">
-        <div class="data-icon">📱</div>
-        <div class="data-content">
-          <strong>App</strong>
-          <span>FLUX CALC — available on Google Play Store</span>
-        </div>
-      </div>
+      <div class="section-title">Your Rights — California Users (CCPA)</div>
+      <p>Under the California Consumer Privacy Act (CCPA) you have the right to:</p><br>
+      <ul>
+        <li><strong>Right to Know:</strong> Know what personal information we collect, use, and disclose.</li>
+        <li><strong>Right to Delete:</strong> Request deletion of your personal information.</li>
+        <li><strong>Right to Opt-Out of Sale:</strong> We do not sell personal information. No opt-out is needed.</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
+        <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information.</li>
+      </ul>
+      <br>
+      <p>To exercise these rights, contact: <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></p>
     </div>
 
-    <footer>
-      <p>This privacy policy applies to the <strong>Flux Calc</strong> Android application.</p>
-      <p style="margin-top:8px;"><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:odinphoenix882@gmail.com">Contact Us</a></p>
-      <p class="footer-brand">© 2026 FLUX CALC — ALL RIGHTS RESERVED</p>
-    </footer>
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Your Rights — Virginia Users (VCDPA)</div>
+      <p>Under the Virginia Consumer Data Protection Act (VCDPA) you have the right to:</p><br>
+      <ul>
+        <li><strong>Access:</strong> Confirm whether we process your personal data and access it.</li>
+        <li><strong>Correct:</strong> Request correction of inaccuracies in your personal data.</li>
+        <li><strong>Delete:</strong> Request deletion of your personal data.</li>
+        <li><strong>Data Portability:</strong> Obtain a copy in a portable format.</li>
+        <li><strong>Opt Out:</strong> Opt out of targeted advertising or sale (we do not engage in either).</li>
+      </ul>
+      <br>
+      <p>To exercise these rights, contact: <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a>. We respond within 45 days.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Your Rights — Brazil Users (LGPD)</div>
+      <p>Under the Lei Geral de Proteção de Dados (LGPD) you have the right to:</p><br>
+      <ul>
+        <li><strong>Confirmation and Access:</strong> Confirm the existence of processing and access your personal data.</li>
+        <li><strong>Correction:</strong> Request correction of incomplete, inaccurate, or outdated data.</li>
+        <li><strong>Anonymisation or Deletion:</strong> Request anonymisation or deletion of unnecessary data.</li>
+        <li><strong>Data Portability:</strong> Request portability of your data to another service provider.</li>
+        <li><strong>Information on Sharing:</strong> Obtain information about third parties with whom we share data.</li>
+        <li><strong>Revocation of Consent:</strong> Revoke consent for processing at any time.</li>
+      </ul>
+      <br>
+      <p>To exercise these rights, contact: <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">How to Exercise Your Rights</div>
+      <ul>
+        <li><strong>Local data:</strong> Manage directly in the app via the History tab or Settings.</li>
+        <li><strong>Analytics data:</strong> Use Google's privacy tools at <a href="https://myaccount.google.com/data-and-privacy" target="_blank">myaccount.google.com/data-and-privacy</a></li>
+        <li><strong>All other requests:</strong> Email <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> — we respond within 30 days (45 days where required by law).</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Children's Privacy</div>
+      <p>FLUX CALC is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe your child has provided us with personal information, please contact us at <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> and we will promptly delete it.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Data Security</div>
+      <ul>
+        <li>All local data is stored using AsyncStorage with operating system-level protection.</li>
+        <li>All network requests to third-party APIs use HTTPS/TLS encryption.</li>
+        <li>We do not operate servers that store your personal data.</li>
+        <li>Third-party services (Firebase, AdMob) implement their own security measures.</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Changes to This Policy</div>
+      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last Updated" date at the top of this page. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Contact Us</div>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></li>
+        <li><strong>App:</strong> FLUX CALC (com.flux.calc)</li>
+        <li><strong>Developer:</strong> Aryan Dutt Gaur</li>
+      </ul>
+      <br>
+      <p>We aim to respond to all enquiries within 30 days.</p>
+    </div>
 
   </div>
+
+  <footer>© 2026 FLUX CALC. All Rights Reserved.</footer>
+</div>
 </body>
 </html>
