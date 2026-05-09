@@ -6,11 +6,7 @@
   <title>Privacy Policy – FLUX CALC</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: #0a0a0a; color: #e0e0e0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 15px; line-height: 1.7; padding: 24px 16px 60px;
-    }
+    body { background: #0a0a0a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; line-height: 1.7; padding: 24px 16px 60px; }
     .container { max-width: 720px; margin: 0 auto; }
     header { text-align: center; padding: 40px 0 32px; border-bottom: 1px solid #222; margin-bottom: 32px; }
     header h1 { font-size: 13px; font-weight: 900; letter-spacing: 3px; color: #00e0ff; text-transform: uppercase; }
@@ -42,20 +38,31 @@
 
     <div class="section">
       <div class="section-title">Introduction</div>
-      <p>Welcome to FLUX CALC. Your privacy is important to us. This Privacy Policy explains what information we collect, why we collect it, how we use it, who we share it with, and your rights as a user.</p><br>
+      <p>Welcome to FLUX CALC. This Privacy Policy explains what information we collect, why we collect it, how we use it, who we share it with, and your rights as a user.</p><br>
       <p>By using FLUX CALC, you agree to the practices described in this policy.</p>
     </div>
     <div class="divider"></div>
 
     <div class="section">
       <div class="section-title">Who We Are (Data Controller)</div>
-      <p>FLUX CALC is developed and operated by:</p><br>
       <ul>
         <li><strong>Developer:</strong> Odin Phoenix</li>
         <li><strong>App:</strong> FLUX CALC (com.flux.calc)</li>
         <li><strong>Contact:</strong> <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></li>
       </ul><br>
-      <p>As a small independent developer, the developer acts as the Data Controller for any personal data processed in connection with this app. All data-related enquiries should be directed to the contact email above.</p>
+      <p>As a small independent developer, the developer acts as the Data Controller for any personal data processed in connection with this app.</p>
+    </div>
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Data Protection Officer</div>
+      <p>As a small independent developer, we are not required under GDPR Article 37 to appoint a formal Data Protection Officer (DPO). We have not designated a DPO.</p><br>
+      <p>For all data protection enquiries, privacy requests, or concerns, please contact us directly:</p><br>
+      <ul>
+        <li><strong>Contact person:</strong> Odin Phoenix</li>
+        <li><strong>Email:</strong> <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></li>
+        <li><strong>Response time:</strong> Within 30 days</li>
+      </ul>
     </div>
     <div class="divider"></div>
 
@@ -63,9 +70,9 @@
       <div class="section-title">Information We Collect</div>
       <p><strong>1. Data Stored Locally on Your Device</strong></p><br>
       <ul>
-        <li><strong>Calculation History:</strong> Saved locally on your device using AsyncStorage. Never leaves your device.</li>
-        <li><strong>App Settings:</strong> Preferences (theme, language, digit grouping) stored locally on your device.</li>
-        <li><strong>Device Storage:</strong> The app does not access your photos, media, or external storage. All data is confined to the app's private AsyncStorage.</li>
+        <li><strong>Calculation History:</strong> Saved locally using AsyncStorage. Never leaves your device.</li>
+        <li><strong>App Settings:</strong> Preferences (theme, language, digit grouping) stored locally.</li>
+        <li><strong>Device Storage:</strong> The app does not access photos, media, or external storage.</li>
       </ul><br>
 
       <p><strong>2. Analytics Data (Firebase Analytics)</strong></p><br>
@@ -74,39 +81,38 @@
         <li>Screen views and navigation paths</li>
         <li>Which calculators are used most frequently</li>
         <li>Session duration and app open frequency</li>
-        <li>Device type, Android OS version, and country/region</li>
+        <li>Device type, Android OS version, country/region</li>
         <li>Search terms entered in the app's search bar</li>
-        <li>App instance ID (randomly generated, non-personal identifier)</li>
-        <li>Firebase Installation ID (randomly generated per-install identifier)</li>
+        <li>App instance ID (randomly generated, non-personal)</li>
+        <li>Firebase Installation ID (randomly generated per-install)</li>
         <li>Network type (Wi-Fi / mobile data)</li>
       </ul><br>
-      <p>This data is anonymised and aggregated. Firebase communicates with: <strong>firebaseinstallations.googleapis.com</strong>, <strong>firebase.googleapis.com</strong>, <strong>app-measurement.com</strong>.</p><br>
+      <p>Firebase communicates with: <strong>firebaseinstallations.googleapis.com</strong>, <strong>firebase.googleapis.com</strong>, <strong>app-measurement.com</strong>, <strong>firebaseremoteconfig.googleapis.com</strong>, <strong>fcmregistrations.googleapis.com</strong>.</p><br>
 
-      <p><strong>3. Device Identifiers</strong></p><br>
-      <p>The app and its third-party SDKs (Firebase, AdMob) may access and transmit the following device identifiers:</p>
+      <p><strong>3. Device ID and Device Identifiers</strong></p><br>
+      <p>The app and its third-party SDKs (Firebase, AdMob) may access and transmit the following Device IDs and device identifiers:</p>
       <ul>
-        <li><strong>Android Device ID</strong> (ANDROID_ID) — a unique hardware identifier assigned by Android, used by Firebase Analytics</li>
-        <li><strong>Android Advertising ID</strong> (AAID / GAID) — a resettable advertising identifier used by Google AdMob</li>
-        <li><strong>Firebase Installation ID</strong> — a randomly generated per-install identifier used for analytics</li>
+        <li><strong>Device ID</strong> (Android Device ID / ANDROID_ID) — a unique hardware-level Device ID assigned by Android, transmitted to Firebase Analytics</li>
+        <li><strong>Advertising ID</strong> (Android Advertising ID / AAID / GAID) — a resettable Device ID used by Google AdMob for non-personalised advertising</li>
+        <li><strong>Firebase Installation ID</strong> — a randomly generated per-install identifier (not tied to hardware)</li>
       </ul><br>
-      <p>You can reset your Android Advertising ID at any time via Android Settings → Google → Ads → Reset advertising ID.</p><br>
+      <p>You can reset your Advertising ID or opt out at any time: Android Settings → Google → Ads → Reset advertising ID.</p><br>
 
       <p><strong>4. Advertising Data (Google AdMob)</strong></p><br>
-      <p>AdMob may collect and transmit:</p>
       <ul>
-        <li>Android Advertising ID (AAID) and Android Device ID</li>
-        <li>Device make, model, OS version, and screen resolution</li>
-        <li>IP address (used for regional ad serving; not stored by us)</li>
+        <li>Device ID (Android Device ID) and Advertising ID (AAID)</li>
+        <li>Device make, model, OS version, screen resolution</li>
+        <li>IP address (for regional ad serving only; not stored by us)</li>
         <li>Ad interaction data (impressions, clicks, view time)</li>
         <li>App version and bundle ID</li>
       </ul><br>
-      <p>We request <strong>non-personalised ads only</strong>. No personal profile is built. AdMob communicates with: <strong>googleads.g.doubleclick.net</strong>, <strong>pagead2.googlesyndication.com</strong>, <strong>mobileads.google.com</strong>, <strong>admob.googleapis.com</strong>, <strong>tpc.googlesyndication.com</strong>.</p><br>
+      <p>We request <strong>non-personalised ads only</strong>. AdMob communicates with: <strong>googleads.g.doubleclick.net</strong>, <strong>pagead2.googlesyndication.com</strong>, <strong>mobileads.google.com</strong>, <strong>admob.googleapis.com</strong>, <strong>tpc.googlesyndication.com</strong>.</p><br>
 
       <p><strong>5. Currency Exchange Rate Requests</strong></p><br>
-      <p>The currency converter fetches live rates from <strong>cdn.jsdelivr.net</strong> (@fawazahmed0/currency-api). Only your IP address is incidentally transmitted. No personal data is stored by us or the API provider.</p><br>
+      <p>Fetches live rates from <strong>cdn.jsdelivr.net</strong> (@fawazahmed0/currency-api). Only IP address incidentally transmitted. No personal data stored.</p><br>
 
       <p><strong>6. Translation Requests</strong></p><br>
-      <p>UI strings are translated via <strong>DeepL API</strong> (api-free.deepl.com) and/or <strong>Google Cloud Translation API</strong> (translation.googleapis.com). Only UI text strings are sent — never your calculations or personal data.</p>
+      <p>UI strings translated via <strong>DeepL API</strong> (api-free.deepl.com) and/or <strong>Google Cloud Translation API</strong> (translation.googleapis.com). Only UI text sent — never calculations or personal data.</p>
     </div>
     <div class="divider"></div>
 
@@ -114,8 +120,8 @@
       <div class="section-title">Legal Basis for Processing (GDPR)</div>
       <ul>
         <li><strong>Legitimate Interests (Art. 6(1)(f)):</strong> Firebase Analytics to improve app performance and fix bugs.</li>
-        <li><strong>Consent (Art. 6(1)(a)):</strong> AdMob advertising data based on consent to non-personalised ads. Withdraw via opt-out steps below.</li>
-        <li><strong>Contractual necessity (Art. 6(1)(b)):</strong> Currency and translation requests necessary to provide requested features.</li>
+        <li><strong>Consent (Art. 6(1)(a)):</strong> AdMob advertising data. Withdraw via opt-out steps below.</li>
+        <li><strong>Contractual necessity (Art. 6(1)(b)):</strong> Currency and translation requests necessary for requested features.</li>
       </ul>
     </div>
     <div class="divider"></div>
@@ -123,11 +129,11 @@
     <div class="section">
       <div class="section-title">How We Use Your Information</div>
       <ul>
-        <li>Analytics data is used solely to improve the app.</li>
-        <li>Ad data is used by Google AdMob to serve non-personalised advertisements.</li>
-        <li>Currency and translation data is used to provide the features you request in real time.</li>
-        <li>We do <strong>not</strong> sell, rent, or share your personal information with third parties for marketing purposes.</li>
-        <li>We do <strong>not</strong> use your data for profiling or automated decision-making.</li>
+        <li>Analytics: solely to improve the app.</li>
+        <li>Ad data: used by Google AdMob for non-personalised advertisements.</li>
+        <li>Currency/translation: to provide requested features in real time.</li>
+        <li>We do <strong>not</strong> sell or share personal information for marketing.</li>
+        <li>We do <strong>not</strong> use data for profiling or automated decision-making.</li>
       </ul>
     </div>
     <div class="divider"></div>
@@ -135,55 +141,43 @@
     <div class="section">
       <div class="section-title">Data Sharing — We Do Not Sell Your Data</div>
       <p><strong>We do not sell or rent your personal data to any third party.</strong></p><br>
-      <p>We share data only with these service providers to operate the app's features:</p><br>
       <ul>
         <li><strong>Google Firebase Analytics</strong> — anonymised usage analytics</li>
         <li><strong>Google AdMob</strong> — non-personalised in-app advertising</li>
         <li><strong>cdn.jsdelivr.net / @fawazahmed0</strong> — live currency exchange rates</li>
         <li><strong>DeepL API</strong> — UI string translation (optional)</li>
         <li><strong>Google Cloud Translation API</strong> — fallback UI translation (optional)</li>
-      </ul><br>
-      <p>We do not share data with any other parties.</p>
+      </ul>
     </div>
     <div class="divider"></div>
 
     <div class="section">
       <div class="section-title">Advertising</div>
       <p>FLUX CALC displays interstitial ads via Google AdMob, capped at <strong>5 ads per day</strong>.</p><br>
-      <p>We request <strong>non-personalised ads only</strong>. Ads are served by context — not by your profile or browsing history.</p><br>
-      <p>More info: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com/technologies/partner-sites</a></p>
+      <p>We request <strong>non-personalised ads only</strong>. Ads served by context — not your profile or browsing history.</p><br>
+      <p><a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com/technologies/partner-sites</a></p>
     </div>
     <div class="divider"></div>
 
     <div class="section">
       <div class="section-title">Do Not Sell My Personal Information</div>
-      <p><strong>We do not sell your personal information to any third party.</strong> We do not share your personal data for cross-context behavioural advertising or targeted advertising.</p><br>
-      <p>Under the California Consumer Privacy Act (CCPA) and similar laws, you have the right to opt out of the sale or sharing of personal information. Because we do not sell personal information, no opt-out of sale is required. However, you can limit data collection at any time:</p><br>
-
-      <p><strong>To opt out of targeted advertising (AdMob):</strong></p>
+      <p><strong>We do not sell your personal information to any third party.</strong> We do not share personal data for cross-context behavioural or targeted advertising.</p><br>
+      <p>To limit data collection:</p><br>
+      <p><strong>Opt out of targeted advertising (AdMob):</strong></p>
       <ol>
-        <li>Open Android <strong>Settings → Google → Ads</strong></li>
+        <li>Android <strong>Settings → Google → Ads</strong></li>
         <li>Tap <strong>"Opt out of Ads Personalisation"</strong></li>
-        <li>Tap <strong>"Reset advertising ID"</strong> to clear your Device ID</li>
-      </ol>
-      <p>Note: we already request non-personalised ads by default.</p><br>
-
-      <p><strong>To opt out of analytics (Firebase):</strong></p>
+        <li>Tap <strong>"Reset advertising ID"</strong></li>
+      </ol><br>
+      <p><strong>Opt out of analytics (Firebase):</strong></p>
       <ol>
-        <li>Go to Android <strong>Settings → Apps → Flux Calc → Permissions</strong></li>
+        <li>Android <strong>Settings → Apps → Flux Calc → Permissions</strong></li>
         <li>Revoke data-related permissions</li>
-      </ol>
-      <p>Or email <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> to request analytics be disabled.</p><br>
-
-      <p><strong>To delete your local data:</strong> Open the app → History tab → Clear All, or uninstall the app.</p><br>
-
-      <p><strong>To submit a Do Not Sell / opt-out request:</strong><br>
-      Email <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> with subject <strong>"Do Not Sell My Personal Information"</strong>. We will respond within 15 business days.</p><br>
-
-      <p><strong>Third-party data deletion:</strong></p>
+      </ol><br>
+      <p><strong>Submit a Do Not Sell request:</strong> Email <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> with subject <strong>"Do Not Sell My Personal Information"</strong>. Response within 15 business days.</p><br>
       <ul>
         <li>Google / Firebase: <a href="https://myaccount.google.com/data-and-privacy" target="_blank">myaccount.google.com/data-and-privacy</a></li>
-        <li>Google Ads / AdMob: <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a></li>
+        <li>AdMob: <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a></li>
       </ul>
     </div>
     <div class="divider"></div>
@@ -191,10 +185,10 @@
     <div class="section">
       <div class="section-title">Data Retention</div>
       <ul>
-        <li><strong>Local data</strong> remains on your device until you clear it or uninstall. We have no access.</li>
-        <li><strong>Firebase Analytics</strong> retained by Google for up to 14 months, then auto-deleted.</li>
-        <li><strong>AdMob advertising data</strong> retained by Google (typically up to 90 days).</li>
-        <li><strong>Currency and translation requests</strong> are transient — no data retained by us.</li>
+        <li><strong>Local data</strong> — on device until cleared or uninstalled. We have no access.</li>
+        <li><strong>Firebase Analytics</strong> — retained by Google up to 14 months.</li>
+        <li><strong>AdMob</strong> — retained by Google (typically up to 90 days).</li>
+        <li><strong>Currency/translation requests</strong> — transient, not retained by us.</li>
       </ul>
     </div>
     <div class="divider"></div>
@@ -202,11 +196,11 @@
     <div class="section">
       <div class="section-title">Your Rights — All Users</div>
       <ul>
-        <li><strong>Access:</strong> Request information about what data we process.</li>
-        <li><strong>Deletion:</strong> Clear history via History tab or uninstall the app.</li>
-        <li><strong>Correction:</strong> Update locally stored data directly in the app.</li>
+        <li><strong>Access:</strong> Request info about data we process.</li>
+        <li><strong>Deletion:</strong> Clear history via History tab or uninstall.</li>
+        <li><strong>Correction:</strong> Update locally stored data in-app.</li>
         <li><strong>Opt out of analytics:</strong> Revoke permissions or contact us.</li>
-        <li><strong>Opt out of personalised ads:</strong> Android Settings → Google → Ads → "Opt out of Ads Personalisation." (Already our default.)</li>
+        <li><strong>Opt out of personalised ads:</strong> Android Settings → Google → Ads (already our default).</li>
       </ul>
     </div>
     <div class="divider"></div>
@@ -216,23 +210,33 @@
       <ul>
         <li><strong>Access (Art. 15):</strong> Request a copy of your personal data.</li>
         <li><strong>Rectification (Art. 16):</strong> Request correction of inaccurate data.</li>
-        <li><strong>Erasure / Right to be Forgotten (Art. 17):</strong> Request deletion of your data.</li>
+        <li><strong>Erasure (Art. 17):</strong> Request deletion of your personal data.</li>
         <li><strong>Restrict Processing (Art. 18):</strong> Request restriction of processing.</li>
-        <li><strong>Data Portability (Art. 20):</strong> Receive your data in a portable format.</li>
+        <li><strong>Data Portability (Art. 20):</strong> Receive data in a portable format.</li>
         <li><strong>Object (Art. 21):</strong> Object to processing based on legitimate interests.</li>
-        <li><strong>Lodge a Complaint:</strong> <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">edpb.europa.eu</a></li>
       </ul>
+    </div>
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Right to Lodge a Complaint</div>
+      <p>You have the right to lodge a complaint with a data protection supervisory authority if you believe we have not handled your personal data in accordance with applicable law.</p><br>
+      <ul>
+        <li><strong>EU / EEA users:</strong> Lodge a complaint with the supervisory authority in your country of residence. Full list: <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">edpb.europa.eu</a></li>
+        <li><strong>UK users:</strong> Contact the Information Commissioner's Office (ICO): <a href="https://ico.org.uk" target="_blank">ico.org.uk</a></li>
+      </ul><br>
+      <p>We encourage you to contact us first at <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> — we will do our best to resolve your concern directly.</p>
     </div>
     <div class="divider"></div>
 
     <div class="section">
       <div class="section-title">Your Rights — California Users (CCPA)</div>
       <ul>
-        <li><strong>Right to Know:</strong> Know what personal information we collect, use, and disclose.</li>
-        <li><strong>Right to Delete:</strong> Request deletion of your personal information.</li>
-        <li><strong>Right to Opt-Out of Sale:</strong> We do not sell personal information. No opt-out needed.</li>
-        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate for exercising CCPA rights.</li>
-        <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information.</li>
+        <li><strong>Right to Know:</strong> Know what personal information we collect and disclose.</li>
+        <li><strong>Right to Delete:</strong> Request deletion of personal information.</li>
+        <li><strong>Right to Opt-Out of Sale:</strong> We do not sell personal information.</li>
+        <li><strong>Right to Non-Discrimination:</strong> No discrimination for exercising CCPA rights.</li>
+        <li><strong>Right to Correct:</strong> Request correction of inaccurate information.</li>
       </ul><br>
       <p>Contact: <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></p>
     </div>
@@ -241,24 +245,24 @@
     <div class="section">
       <div class="section-title">Your Rights — Virginia Users (VCDPA)</div>
       <ul>
-        <li><strong>Access:</strong> Confirm whether we process your data and access it.</li>
+        <li><strong>Access:</strong> Confirm processing and access your data.</li>
         <li><strong>Correct:</strong> Request correction of inaccuracies.</li>
-        <li><strong>Delete:</strong> Request deletion of your personal data.</li>
-        <li><strong>Data Portability:</strong> Obtain a copy in a portable format.</li>
-        <li><strong>Opt Out:</strong> Opt out of targeted advertising or sale (we do not engage in either).</li>
+        <li><strong>Delete:</strong> Request deletion of your data.</li>
+        <li><strong>Data Portability:</strong> Obtain a portable copy.</li>
+        <li><strong>Opt Out:</strong> Opt out of targeted advertising or sale (we do neither).</li>
       </ul><br>
-      <p>Contact: <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a>. Response within 45 days.</p>
+      <p>Contact: <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> — response within 45 days.</p>
     </div>
     <div class="divider"></div>
 
     <div class="section">
       <div class="section-title">Your Rights — Brazil Users (LGPD)</div>
       <ul>
-        <li><strong>Confirmation and Access:</strong> Confirm processing and access your data.</li>
-        <li><strong>Correction:</strong> Request correction of incomplete or inaccurate data.</li>
+        <li><strong>Confirmation and Access:</strong> Confirm and access your personal data.</li>
+        <li><strong>Correction:</strong> Request correction of inaccurate data.</li>
         <li><strong>Anonymisation or Deletion:</strong> Request deletion of unnecessary data.</li>
         <li><strong>Data Portability:</strong> Request portability to another provider.</li>
-        <li><strong>Information on Sharing:</strong> Obtain info about third parties we share with.</li>
+        <li><strong>Information on Sharing:</strong> Learn which third parties receive your data.</li>
         <li><strong>Revocation of Consent:</strong> Revoke consent at any time.</li>
       </ul><br>
       <p>Contact: <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a></p>
@@ -268,23 +272,23 @@
     <div class="section">
       <div class="section-title">How to Exercise Your Rights</div>
       <ul>
-        <li><strong>Local data:</strong> Manage in the app via History tab or Settings.</li>
+        <li><strong>Local data:</strong> History tab or Settings in the app.</li>
         <li><strong>Analytics data:</strong> <a href="https://myaccount.google.com/data-and-privacy" target="_blank">myaccount.google.com/data-and-privacy</a></li>
-        <li><strong>All other requests:</strong> Email <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> — response within 30 days (45 days where required).</li>
+        <li><strong>All other requests:</strong> <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> — response within 30 days (45 days where required).</li>
       </ul>
     </div>
     <div class="divider"></div>
 
     <div class="section">
       <div class="section-title">Children's Privacy</div>
-      <p>FLUX CALC is not directed at children under 13. We do not knowingly collect personal information from children under 13. Contact <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> if you believe your child has provided personal information and we will delete it promptly.</p>
+      <p>FLUX CALC is not directed at children under 13. We do not knowingly collect personal information from children under 13. Contact <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> if you believe your child has provided personal information.</p>
     </div>
     <div class="divider"></div>
 
     <div class="section">
       <div class="section-title">Data Security</div>
       <ul>
-        <li>All local data uses AsyncStorage with OS-level protection.</li>
+        <li>Local data uses AsyncStorage with OS-level protection.</li>
         <li>All network requests use HTTPS/TLS encryption.</li>
         <li>We do not operate servers that store your personal data.</li>
         <li>Firebase and AdMob implement their own security measures.</li>
@@ -305,7 +309,7 @@
         <li><strong>App:</strong> FLUX CALC (com.flux.calc)</li>
         <li><strong>Developer:</strong> Odin Phoenix</li>
       </ul><br>
-      <p>We aim to respond to all enquiries within 30 days.</p>
+      <p>We aim to respond within 30 days.</p>
     </div>
 
   </div>
