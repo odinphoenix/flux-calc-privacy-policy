@@ -48,6 +48,8 @@
     .section ul { padding-left: 0; list-style: none; }
     .section ul li { padding: 3px 0; }
     .section ul li::before { content: "• "; color: #555; }
+    .section ol { padding-left: 18px; }
+    .section ol li { padding: 3px 0; color: #999; font-size: 14px; }
     b, strong { color: #e0e0e0; font-weight: 700; }
     .divider { height: 1px; background: #222; margin-bottom: 28px; opacity: 0.6; }
     footer { text-align: center; margin-top: 40px; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: #333; text-transform: uppercase; }
@@ -94,37 +96,41 @@
       <ul>
         <li><strong>Calculation History:</strong> Results from calculators you use are saved locally on your device using AsyncStorage. This data never leaves your device.</li>
         <li><strong>App Settings:</strong> Your preferences (theme, language, digit grouping) are stored locally on your device.</li>
+        <li><strong>Device Storage:</strong> The app does not access your photos, media, or external storage. All data is confined to the app's private AsyncStorage.</li>
       </ul>
       <br>
       <p><strong>2. Analytics Data (Firebase Analytics)</strong></p><br>
-      <p>We use Google Firebase Analytics to understand how users interact with the app. This may collect:</p>
+      <p>We use Google Firebase Analytics to understand how users interact with the app. Firebase may collect and transmit:</p>
       <ul>
         <li>Screen views and navigation paths</li>
         <li>Which calculators are used most frequently</li>
         <li>Session duration and app open frequency</li>
-        <li>Device type, operating system version, and country/region</li>
+        <li>Device type, Android OS version, and country/region</li>
         <li>Search terms entered in the app's search bar</li>
-        <li>App instance ID (a non-personal random identifier)</li>
+        <li>App instance ID (a randomly generated, non-personal identifier)</li>
+        <li>Firebase Installation ID (a randomly generated identifier per app install)</li>
+        <li>Network type (Wi-Fi / mobile data)</li>
       </ul>
       <br>
-      <p>This data is anonymised and aggregated. We cannot identify individual users from this data.</p>
+      <p>This data is anonymised and aggregated. We cannot identify individual users. Firebase communicates with: <strong>firebaseinstallations.googleapis.com</strong>, <strong>firebase.googleapis.com</strong>, <strong>app-measurement.com</strong>.</p>
       <br>
       <p><strong>3. Advertising Data (Google AdMob)</strong></p><br>
-      <p>We display advertisements via Google AdMob. AdMob may collect:</p>
+      <p>We display advertisements via Google AdMob. AdMob may collect and transmit:</p>
       <ul>
-        <li>Advertising ID (Android Advertising ID)</li>
-        <li>Device information (model, OS version, screen size)</li>
-        <li>IP address (used for regional ad serving only)</li>
-        <li>Ad interaction data (impressions, clicks)</li>
+        <li>Android Advertising ID (AAID) — a resettable device identifier</li>
+        <li>Device make, model, OS version, and screen resolution</li>
+        <li>IP address (used to determine region for ad serving; not stored by us)</li>
+        <li>Ad interaction data (impressions, clicks, view time)</li>
+        <li>App version and bundle ID</li>
       </ul>
       <br>
-      <p>We request <strong>non-personalised ads only</strong>. No personal profile is built for targeted advertising.</p>
+      <p>We request <strong>non-personalised ads only</strong>. No personal profile is built for targeted advertising. AdMob communicates with: <strong>googleads.g.doubleclick.net</strong>, <strong>pagead2.googlesyndication.com</strong>, <strong>mobileads.google.com</strong>.</p>
       <br>
       <p><strong>4. Currency Exchange Rate Requests</strong></p><br>
-      <p>The currency converter fetches live rates from a public API (cdn.jsdelivr.net / @fawazahmed0). Only your IP address is incidentally transmitted as part of a standard HTTPS request. No personal data is sent or stored by us.</p>
+      <p>The currency converter fetches live exchange rates from <strong>cdn.jsdelivr.net</strong> (powered by @fawazahmed0/currency-api). Only your IP address is incidentally transmitted as part of a standard HTTPS request. No personal data is sent or stored by us or the API provider.</p>
       <br>
       <p><strong>5. Translation Requests</strong></p><br>
-      <p>If you change the app language, UI strings are translated via DeepL API and/or Google Translate API. Only the UI text strings (not your calculations or personal data) are sent. No personal identifiers are included in these requests.</p>
+      <p>If you change the app language, UI strings are translated via <strong>DeepL API</strong> (api-free.deepl.com) and/or <strong>Google Cloud Translation API</strong> (translation.googleapis.com). Only the UI text strings (e.g. button labels, section titles) are sent — never your calculations or personal data. No personal identifiers are included in translation requests.</p>
     </div>
 
     <div class="divider"></div>
@@ -134,7 +140,7 @@
       <p>For users in the European Union and European Economic Area, we process personal data under the following legal bases:</p><br>
       <ul>
         <li><strong>Legitimate Interests (Art. 6(1)(f)):</strong> Firebase Analytics data is processed to improve app performance, fix bugs, and understand usage patterns.</li>
-        <li><strong>Consent (Art. 6(1)(a)):</strong> Advertising data via AdMob is processed based on your implicit consent to non-personalised advertising when you use the app. You may withdraw this by opting out as described in the Your Rights section.</li>
+        <li><strong>Consent (Art. 6(1)(a)):</strong> Advertising data via AdMob is processed based on your implicit consent to non-personalised advertising when you use the app. You may withdraw this by opting out as described below.</li>
         <li><strong>Contractual necessity (Art. 6(1)(b)):</strong> Currency exchange rates and translation requests are necessary to provide the features you explicitly request.</li>
       </ul>
     </div>
@@ -163,7 +169,7 @@
         <li><strong>Google AdMob</strong> — non-personalised in-app advertising</li>
         <li><strong>cdn.jsdelivr.net / @fawazahmed0</strong> — live currency exchange rates</li>
         <li><strong>DeepL API</strong> — UI string translation (optional)</li>
-        <li><strong>Google Translate API</strong> — fallback UI translation (optional)</li>
+        <li><strong>Google Cloud Translation API</strong> — fallback UI translation (optional)</li>
       </ul>
       <br>
       <p>We do not share data with any other parties. If required by law to disclose information, we will do so only to the extent legally required.</p>
@@ -176,6 +182,39 @@
       <p>FLUX CALC displays interstitial advertisements powered by Google AdMob. Ads are shown after you perform calculations, capped at a maximum of <strong>5 ads per day</strong>.</p><br>
       <p>We request <strong>non-personalised ads only</strong> (requestNonPersonalizedAdsOnly = true). Ads are served based on context — not based on your personal profile, browsing history, or behaviour across other apps.</p><br>
       <p>For more information: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">How to Opt Out of Advertising &amp; Data Sharing</div>
+      <p>We do <strong>not</strong> sell your personal data and do <strong>not</strong> use it for targeted advertising. However, if you wish to further limit data collection:</p><br>
+
+      <p><strong>Opt out of AdMob advertising:</strong></p>
+      <ol>
+        <li>Open Android <strong>Settings</strong></li>
+        <li>Go to <strong>Google → Ads</strong></li>
+        <li>Tap <strong>"Opt out of Ads Personalisation"</strong> and/or <strong>"Reset advertising ID"</strong></li>
+      </ol>
+      <p>Since we already request non-personalised ads, this is our default behaviour.</p><br>
+
+      <p><strong>Opt out of Firebase Analytics:</strong></p>
+      <ol>
+        <li>Go to Android <strong>Settings → Apps → Flux Calc → Permissions</strong></li>
+        <li>Revoke any data collection permissions</li>
+      </ol>
+      <p>Or email <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a> to request analytics be disabled for your installation.</p><br>
+
+      <p><strong>Delete your local data:</strong></p>
+      <p>Open the app → History tab → Clear All, or simply uninstall the app.</p><br>
+
+      <p><strong>Request deletion of third-party data:</strong></p>
+      <ul>
+        <li>Firebase / Google: <a href="https://myaccount.google.com/data-and-privacy" target="_blank">myaccount.google.com/data-and-privacy</a></li>
+        <li>AdMob / Google Ads: <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a></li>
+      </ul>
+      <br>
+      <p>For all other opt-out requests, email <a href="mailto:odinphoenix882@gmail.com">odinphoenix882@gmail.com</a>.</p>
     </div>
 
     <div class="divider"></div>
